@@ -1,28 +1,2 @@
-providers = ["php"]
-
-[phases.setup]
-nixPkgs = [
-    "php83",
-    "php83Packages.composer",
-    "php83Extensions.pdo_mysql",
-    "php83Extensions.mbstring",
-    "gcc",
-    "gnumake",
-    "autoconf",
-    "pkg-config",
-    "openssl"
-]
-
-[phases.mongo]
-dependsOn = ["setup"]
-cmds = [
-    "pecl install mongodb",
-    "echo extension=mongodb.so > /etc/php83/conf.d/mongodb.ini"
-]
-
 [phases.install]
-dependsOn = ["mongo"]
-cmds = ["composer install --no-dev --no-scripts --no-interaction --optimize-autoloader"]
-
-[start]
-cmd = "mkdir -p /tmp/htdocs && ln -sfn /app /tmp/htdocs/vitegourmand && php -S 0.0.0.0:$PORT -t /tmp/htdocs"
+cmds = ["composer install --ignore-platform-req=ext-mongodb --optimize-autoloader --no-dev --no-interaction"]
