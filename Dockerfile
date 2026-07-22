@@ -10,8 +10,12 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     && docker-php-ext-enable mongodb \
     && docker-php-ext-install pdo_mysql mbstring \
     && apt-get purge -y --auto-remove $PHPIZE_DEPS \
-    && rm -rf /var/lib/apt/lists/* \
-    && a2enmod rewrite
+    && rm -rf /var/lib/apt/lists/*
+
+RUN a2dismod mpm_event mpm_worker 2>/dev/null; \
+    a2enmod mpm_prefork
+
+RUN a2enmod rewrite
 
 RUN echo "variables_order = EGPCS" > /usr/local/etc/php/conf.d/variables-order.ini
 RUN echo "ServerName localhost" >> /etc/apache2/apache2.conf
