@@ -1,0 +1,191 @@
+.presentation-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 90px;
+    max-width: 1300px;
+    margin: 80px auto 0;
+    padding: 0 30px;
+    flex-wrap: wrap;
+}
+
+.presentation-texte {
+    flex: 1;
+    min-width: 320px;
+    max-width: 480px;
+}
+
+.presentation-texte h1 {
+    color: var(--orange);
+    font-family: 'Malayalam MN', sans-serif;
+    font-size: 42px;
+    font-weight: 700;
+    margin-bottom: 25px;
+}
+
+.presentation-texte p {
+    font-size: 18px;
+    line-height: 1.8;
+    color: var(--black1);
+    margin-bottom: 15px;
+}
+
+.presentation-image {
+    flex: 1;
+    min-width: 320px;
+    max-width: 560px;
+}
+
+.presentation-image img {
+    width: 100%;
+    height: 420px;
+    object-fit: cover;
+    border-radius: 20px;
+    box-shadow: 4px 4px 0 var(--orange);
+    display: block;
+}
+
+.equipe-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 90px;
+    max-width: 1300px;
+    margin: 100px auto 0;
+    padding: 0 30px;
+    flex-wrap: wrap-reverse;
+}
+
+.equipe-image {
+    flex: 1;
+    min-width: 320px;
+    max-width: 560px;
+}
+
+.equipe-image img {
+    width: 100%;
+    height: 420px;
+    object-fit: cover;
+    border-radius: 20px;
+    box-shadow: 4px 4px 0 var(--orange);
+    display: block;
+}
+
+.equipe-texte {
+    flex: 1;
+    min-width: 320px;
+    max-width: 480px;
+}
+
+.equipe-texte h2 {
+    color: var(--orange);
+    font-family: 'Malayalam MN', sans-serif;
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 25px;
+}
+
+.equipe-texte p {
+    font-size: 18px;
+    line-height: 1.8;
+    color: var(--black1);
+}
+
+.avis-section {
+    max-width: 1300px;
+    margin: 100px auto 90px;
+    padding: 0 30px;
+}
+
+.avis-section h2 {
+    color: var(--orange);
+    font-family: 'Malayalam MN', sans-serif;
+    font-size: 32px;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.avis-vide {
+    text-align: center;
+    color: var(--grey1);
+    font-style: italic;
+    font-size: 18px;
+}
+
+.avis-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.avis-card {
+    background-color: #fff;
+    border-radius: 16px;
+    box-shadow: 4px 4px 0 var(--orange);
+    padding: 25px;
+}
+
+.avis-nom {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.avis-note {
+    color: var(--orange);
+    font-size: 18px;
+    margin-bottom: 12px;
+}
+
+.avis-note-chiffre {
+    color: var(--black2);
+    font-size: 14px;
+    margin-left: 8px;
+}
+
+.avis-description {
+    font-size: 15px;
+    line-height: 1.6;
+    color: var(--black1);
+}
+
+@media (max-width: 1024px) {
+    .presentation-section,
+    .equipe-section {
+        text-align: center;
+    }
+}
+
+@media (max-width: 767px) {
+    .presentation-section {
+        margin-top: 40px;
+        gap: 30px;
+    }
+
+    .equipe-section {
+        margin-top: 50px;
+        gap: 30px;
+    }
+
+    .presentation-texte h1 {
+        font-size: 28px;
+    }
+
+    .equipe-texte h2 {
+        font-size: 26px;
+    }
+
+    .presentation-image img,
+    .equipe-image img {
+        height: 240px;
+    }
+
+    .avis-section {
+        margin: 60px auto 50px;
+    }
+
+    .avis-section h2 {
+        font-size: 26px;
+    }
+}

@@ -1,0 +1,55 @@
+.auth-carte {
+    max-width: 620px;
+    padding: 32px 30px;
+}
+
+.auth-carte h1 {
+    font-size: 26px;
+}
+
+.auth-sous-titre {
+    font-size: 19px;
+    margin: 4px 0 15px;
+}
+
+.auth-champs {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0 20px;
+}
+
+.champ-large {
+    grid-column: 1 / 3;
+}
+
+.auth-carte label {
+    font-size: 12px;
+    margin: 14px 0 6px;
+}
+
+.auth-carte input {
+    padding: 10px 14px;
+    font-size: 15px;
+}
+
+.auth-carte .bouton {
+    margin-top: 22px;
+    padding: 11px;
+    font-size: 16px;
+}
+
+.auth-lien {
+    margin-top: 18px;
+    font-size: 15px;
+}
+
+@media (max-width: 767px) {
+    .auth-champs {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    .champ-large {
+        grid-column: 1;
+    }
+}

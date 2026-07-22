@@ -1,0 +1,128 @@
+.stats-grille {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 25px;
+    margin-bottom: 35px;
+}
+
+.stat-carte {
+    background-color: var(--white);
+    border-radius: 16px;
+    box-shadow: 4px 4px 0 var(--orange);
+    padding: 22px 25px;
+}
+
+.stat-label {
+    color: var(--grey1);
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.stat-valeur {
+    color: var(--orange);
+    font-size: 26px;
+    font-weight: 700;
+    margin-top: 8px;
+}
+
+.stat-hausse {
+    color: #2E7D32;
+}
+
+.stat-baisse {
+    color: var(--orange);
+}
+
+.dashboard-grille {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px;
+    align-items: start;
+}
+
+.graphique-conteneur {
+    position: relative;
+    height: 320px;
+}
+
+.filtres-ca {
+    display: flex;
+    align-items: flex-end;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-bottom: 25px;
+}
+
+.filtre-ca-champ {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.filtre-ca-champ label {
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--grey1);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.filtre-ca-champ select,
+.filtre-ca-champ input[type="date"] {
+    background-color: #fff;
+    border: 1px solid #E8CDA4;
+    border-radius: 10px;
+    padding: 10px 14px;
+    font-family: inherit;
+    font-size: 15px;
+    color: var(--black1);
+}
+
+.filtre-ca-bouton {
+    margin-bottom: 1px;
+}
+
+.dashboard-vide {
+    color: var(--grey1);
+    font-style: italic;
+    font-size: 15px;
+}
+
+.tableau-ca {
+    box-shadow: none;
+}
+
+.ca-montant {
+    color: var(--orange);
+    font-weight: 700;
+}
+
+@media (max-width: 767px) {
+    .stats-grille {
+        grid-template-columns: 1fr 1fr;
+        gap: 15px;
+    }
+
+    .stat-carte {
+        padding: 16px 18px;
+    }
+
+    .stat-valeur {
+        font-size: 21px;
+    }
+
+    .graphique-conteneur {
+        height: 240px;
+    }
+
+    .filtres-ca {
+        align-items: stretch;
+    }
+
+    .filtre-ca-champ select,
+    .filtre-ca-champ input[type="date"] {
+        width: 100%;
+    }
+}

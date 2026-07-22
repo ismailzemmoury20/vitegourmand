@@ -1,0 +1,30 @@
+.infos-carte {
+    max-width: 460px;
+    margin: 14vh auto 0;
+    text-align: center;
+}
+
+.logout-question {
+    font-size: 17px;
+    margin-bottom: 20px;
+}
+
+.infos-carte .bouton {
+    margin-top: 0;
+}
+
+.logout-annuler {
+    margin-top: 20px;
+    font-size: 15px;
+}
+
+.logout-annuler a {
+    font-weight: 700;
+    text-decoration: underline;
+}
+
+@media (max-width: 767px) {
+    .infos-carte {
+        margin-top: 6vh;
+    }
+}

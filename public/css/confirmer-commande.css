@@ -1,0 +1,144 @@
+.commande {
+    display: flex;
+    justify-content: center;
+    padding: 70px 20px;
+}
+
+.commande-carte {
+    width: 100%;
+    max-width: 760px;
+    padding: 45px 40px;
+}
+
+.commande-carte h1 {
+    font-size: 30px;
+    color: var(--black1);
+}
+
+.commande-menu {
+    background-color: var(--white);
+    border: 1px solid #E8CDA4;
+    border-radius: 14px;
+    padding: 20px 25px;
+    margin-bottom: 25px;
+}
+
+.commande-menu h2 {
+    color: var(--orange);
+    font-family: 'Malayalam MN', sans-serif;
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.commande-menu-prix {
+    color: var(--orange);
+    font-weight: 700;
+    margin-top: 6px;
+}
+
+.commande-menu-minimum {
+    color: var(--grey1);
+    font-size: 15px;
+    margin-top: 4px;
+}
+
+.commande-champs {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5px 25px;
+}
+
+.champ-large {
+    grid-column: 1 / 3;
+}
+
+.champ label {
+    display: block;
+    text-transform: uppercase;
+    color: var(--black2);
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin: 18px 0 8px;
+}
+
+.champ input {
+    width: 100%;
+    background-color: var(--white);
+    border: 1px solid #E8CDA4;
+    border-radius: 10px;
+    padding: 12px 15px;
+    font-family: inherit;
+    font-size: 16px;
+    color: var(--black1);
+}
+
+.champ input:focus {
+    outline: 2px solid var(--orange);
+}
+
+.commande-recap {
+    background-color: var(--white);
+    border-radius: 14px;
+    padding: 20px 25px;
+    margin-top: 30px;
+}
+
+.commande-recap p {
+    display: flex;
+    justify-content: space-between;
+    padding: 6px 0;
+    font-size: 16px;
+}
+
+.recap-total {
+    border-top: 1px solid #E8CDA4;
+    margin-top: 8px;
+    padding-top: 12px;
+    font-weight: 700;
+    color: var(--orange);
+    font-size: 19px;
+}
+
+.commande-carte .bouton {
+    width: 100%;
+    margin-top: 28px;
+    padding: 13px;
+    font-size: 17px;
+}
+
+.commande-choix {
+    margin: 20px 0 10px;
+    font-size: 17px;
+}
+
+@media (max-width: 767px) {
+    .commande {
+        padding: 30px 12px;
+    }
+
+    .commande-carte {
+        padding: 28px 20px;
+    }
+
+    .commande-carte h1 {
+        font-size: 24px;
+    }
+
+    .commande-champs {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    .champ-large {
+        grid-column: 1;
+    }
+
+    .champ input {
+        min-height: 44px;
+    }
+
+    .commande-carte .bouton {
+        min-height: 44px;
+    }
+}
