@@ -18,8 +18,8 @@
             <input type="password" id="password" name="password" required>
             <button type="submit" class="bouton">Se connecter</button>
         </form>
-        <p class="auth-lien"><a href="/vitegourmand/public/index.php?p=forgot-password">Mot de passe oublié ?</a></p>
-        <p class="auth-lien">Pas de compte ? <a href="/vitegourmand/public/index.php?p=register<?= $suite ?>">S'inscrire</a></p>
+        <p class="auth-lien"><a href="/index.php?p=forgot-password">Mot de passe oublié ?</a></p>
+        <p class="auth-lien">Pas de compte ? <a href="/index.php?p=register<?= $suite ?>">S'inscrire</a></p>
     </div>
 </section>
 <?php

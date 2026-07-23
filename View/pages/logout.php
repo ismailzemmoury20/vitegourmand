@@ -19,7 +19,7 @@ ob_start();
     <form method="post" action="">
         <button type="submit" class="bouton">Se déconnecter</button>
     </form>
-    <p class="logout-annuler"><a href="/vitegourmand/public/index.php?p=<?= $retour ?>">Annuler</a></p>
+    <p class="logout-annuler"><a href="/index.php?p=<?= $retour ?>">Annuler</a></p>
 </div>
 <?php
 $contenu = ob_get_clean();

@@ -9,7 +9,7 @@ function lienTri(string $colonne, string $tri, string $sens): string
         'tri'      => $colonne,
         'sens'     => $nouveauSens,
     ];
-    return '/vitegourmand/public/index.php?' . http_build_query($params);
+    return '/index.php?' . http_build_query($params);
 }
 $estAdmin = (int) ($_SESSION['role_id'] ?? 0) === 1;
 ob_start();
@@ -18,7 +18,7 @@ ob_start();
 <?php if (!empty($error)): ?>
     <p class="message message-erreur"><?= htmlspecialchars($error) ?></p>
 <?php endif; ?>
-<form class="filtres-barre" method="get" action="/vitegourmand/public/index.php">
+<form class="filtres-barre" method="get" action="/index.php">
     <input type="hidden" name="p" value="employe-commandes">
     <input type="text" name="commande" placeholder="Rechercher un client" value="<?= htmlspecialchars($_GET['commande'] ?? '') ?>">
     <select name="statut">
@@ -61,7 +61,7 @@ ob_start();
                 <td class="td-nowrap" data-label="Total"><?= number_format((float) $commande['prix_menu'] + (float) $commande['prix_livraison'], 2, ',', ' ') ?> €</td>
                 <td class="td-actions">
                     <div class="tableau-actions">
-                        <a class="bouton bouton-petit" href="/vitegourmand/public/index.php?p=employe-commandes&action=detail&numero=<?= urlencode($commande['numero_commande']) ?>">Détails</a>
+                        <a class="bouton bouton-petit" href="/index.php?p=employe-commandes&action=detail&numero=<?= urlencode($commande['numero_commande']) ?>">Détails</a>
                         <?php if ($estAdmin && $commande['statut'] !== 'annulée'): ?>
                             <button type="button" class="bouton bouton-petit ouvrir-statut" data-popup="popup-statut" data-numero="<?= htmlspecialchars($commande['numero_commande']) ?>" data-actuel="<?= htmlspecialchars($commande['statut']) ?>" data-pret-materiel="<?= (int) $commande['pret_materiel'] ?>">Modifier statut</button>
                         <?php elseif (!$estAdmin && $statutSuivant): ?>
@@ -79,7 +79,7 @@ ob_start();
 </div>
 <div class="pagination">
     <?php for ($i = 1; $i <= ($totalPages ?? 1); $i++): ?>
-        <a class="pagination-lien <?= $i === ($page ?? 1) ? 'actif' : '' ?>" href="/vitegourmand/public/index.php?<?= http_build_query(['p' => 'employe-commandes', 'commande' => $_GET['commande'] ?? '', 'statut' => $_GET['statut'] ?? '', 'tri' => $tri, 'sens' => $sens, 'page' => $i]) ?>"><?= $i ?></a>
+        <a class="pagination-lien <?= $i === ($page ?? 1) ? 'actif' : '' ?>" href="/index.php?<?= http_build_query(['p' => 'employe-commandes', 'commande' => $_GET['commande'] ?? '', 'statut' => $_GET['statut'] ?? '', 'tri' => $tri, 'sens' => $sens, 'page' => $i]) ?>"><?= $i ?></a>
     <?php endfor; ?>
 </div>
 <?php require __DIR__ . '/../../partials/popups/popup-modifier-statut-commande.php'; ?>

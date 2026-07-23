@@ -28,7 +28,7 @@
         </ul>
     </div>
 </div>
-<p class="suivi-retour"><a href="/vitegourmand/public/index.php?p=commandes">Retour à mes commandes</a></p>
+<p class="suivi-retour"><a href="/index.php?p=commandes">Retour à mes commandes</a></p>
 <?php
 $contenu = ob_get_clean();
 $titre = 'Suivi de commande - Vite & Gourmand';

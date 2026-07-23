@@ -8,7 +8,7 @@
         <?php endif; ?>
         <?php if (!empty($message)): ?>
             <p class="message message-succes"><?= htmlspecialchars($message) ?></p>
-            <p class="auth-lien"><a href="/vitegourmand/public/index.php?p=login">Se connecter</a></p>
+            <p class="auth-lien"><a href="/index.php?p=login">Se connecter</a></p>
         <?php else: ?>
             <form method="post" action="">
                 <label for="password">Nouveau mot de passe</label>

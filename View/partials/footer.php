@@ -40,5 +40,5 @@ if ($groupeActuel) {
             </p>
         <?php endforeach; ?>
     </div>
-    <a class="pied-lien" href="/vitegourmand/public/index.php?p=mentions-legales">Mentions légales</a>
+    <a class="pied-lien" href="/index.php?p=mentions-legales">Mentions légales</a>
 </footer>

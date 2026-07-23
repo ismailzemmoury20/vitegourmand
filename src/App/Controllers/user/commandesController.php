@@ -46,7 +46,7 @@ class commandesController
         }
 
         $commandeTable->annuler($numero_commande);
-        header('Location: /vitegourmand/public/index.php?p=commandes');
+        header('Location: /index.php?p=commandes');
         exit;
     }
 
@@ -99,7 +99,7 @@ class commandesController
         }
 
         $commandeTable->modifier($numero_commande, $date_prestation, $heure_livraison, $nombre_personne, $prix_menu, $prix_livraison);
-        header('Location: /vitegourmand/public/index.php?p=commandes');
+        header('Location: /index.php?p=commandes');
         exit;
     }
 }

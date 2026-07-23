@@ -26,7 +26,8 @@ class forgotPasswordController
                     $token = bin2hex(random_bytes(32));
                     $passwordResetTable->creerToken($user['utilisateur_id'], $token);
 
-                    $lien = 'http://localhost/vitegourmand/public/index.php?p=reset-password&token=' . $token;
+                    $baseUrl = $_ENV['APP_URL'] ?? 'http://localhost:8888/vitegourmand/public';
+                    $lien = $baseUrl . '/index.php?p=reset-password&token=' . $token;
 
                     try {
                         $mail = new PHPMailer(true);

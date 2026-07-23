@@ -73,7 +73,7 @@
             </form>
         <?php else: ?>
             <p class="commande-choix">Pour passer une commande, choisissez d'abord un menu.</p>
-            <a class="bouton" href="/vitegourmand/public/index.php?p=menus">Voir nos menus</a>
+            <a class="bouton" href="/index.php?p=menus">Voir nos menus</a>
         <?php endif; ?>
     </div>
 </section>

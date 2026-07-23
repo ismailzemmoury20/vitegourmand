@@ -27,7 +27,7 @@
     </div>
     <div class="infos-carte dashboard-carte">
         <h2 class="suivi-sous-titre">Chiffre d'affaires par menu</h2>
-        <form class="filtres-ca" method="get" action="/vitegourmand/public/index.php">
+        <form class="filtres-ca" method="get" action="/index.php">
             <input type="hidden" name="p" value="admin-dashboard">
             <div class="filtre-ca-champ">
                 <label for="ca-menu">Menu</label>

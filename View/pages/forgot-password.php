@@ -14,7 +14,7 @@
             <input type="email" id="email" name="email" value="<?= htmlspecialchars($_POST['email'] ?? '') ?>" required>
             <button type="submit" class="bouton">Envoyer le lien</button>
         </form>
-        <p class="auth-lien"><a href="/vitegourmand/public/index.php?p=login">Retour à la connexion</a></p>
+        <p class="auth-lien"><a href="/index.php?p=login">Retour à la connexion</a></p>
     </div>
 </section>
 <?php

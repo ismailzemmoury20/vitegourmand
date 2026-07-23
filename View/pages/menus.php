@@ -9,7 +9,7 @@ ob_start();
 
 <div class="filtre">
     <p class="filtre-title">Filtres</p>
-    <form id="filtre-form" method="get" action="/vitegourmand/public/index.php">
+    <form id="filtre-form" method="get" action="/index.php">
         <input type="hidden" name="p" value="menus">
         <div class="filtre-input">
             <label for="prix-max">Prix maximum</label>

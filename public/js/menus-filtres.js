@@ -18,7 +18,7 @@ function chargerMenus() {
     params.set('regime', document.getElementById('regime').value);
     params.set('theme', document.getElementById('theme').value);
 
-    fetch('/vitegourmand/public/index.php?' + params.toString())
+    fetch('/index.php?' + params.toString())
         .then(function (reponse) {
             return reponse.text();
         })
@@ -39,7 +39,7 @@ if (filtreForm && listeMenus) {
 }
 
 function afficherDetailMenu(menuId) {
-    fetch('/vitegourmand/public/index.php?p=menus&action=getMenuDetails&id=' + menuId)
+    fetch('/index.php?p=menus&action=getMenuDetails&id=' + menuId)
         .then(function (reponse) {
             return reponse.json();
         })
@@ -50,7 +50,7 @@ function afficherDetailMenu(menuId) {
             document.getElementById('detail-menu-prix').textContent = menu.prix_par_personne;
             document.getElementById('detail-menu-conditions').textContent = menu.conditions || '';
             document.getElementById('detail-menu-stock').textContent = menu.quantite_restante + ' disponible(s) en stock';
-            document.getElementById('detail-menu-commander').href = '/vitegourmand/public/index.php?p=commande&menu_id=' + menu.menu_id;
+            document.getElementById('detail-menu-commander').href = '/index.php?p=commande&menu_id=' + menu.menu_id;
 
             const galerie = document.getElementById('detail-menu-galerie');
             galerie.innerHTML = '';

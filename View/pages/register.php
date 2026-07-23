@@ -59,7 +59,7 @@
             </div>
             <button type="submit" class="bouton">Créer mon compte</button>
         </form>
-        <p class="auth-lien">Déjà un compte ? <a href="/vitegourmand/public/index.php?p=login<?= $suite ?>">Se connecter</a></p>
+        <p class="auth-lien">Déjà un compte ? <a href="/index.php?p=login<?= $suite ?>">Se connecter</a></p>
     </div>
 </section>
 <?php

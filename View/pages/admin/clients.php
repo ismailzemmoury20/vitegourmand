@@ -24,7 +24,7 @@
                 <td class="td-nowrap" data-label="Statut"><?= $client['actif'] ? 'Actif' : 'Bloqué' ?></td>
                 <td class="td-actions">
                     <div class="tableau-actions">
-                        <a class="bouton bouton-petit" href="/vitegourmand/public/index.php?p=admin-clients&action=detail&id=<?= (int) $client['utilisateur_id'] ?>">Détails</a>
+                        <a class="bouton bouton-petit" href="/index.php?p=admin-clients&action=detail&id=<?= (int) $client['utilisateur_id'] ?>">Détails</a>
                         <button type="button" class="bouton bouton-petit bouton-annuler ouvrir-client-bloquer" data-popup="popup-client-bloquer" data-id="<?= (int) $client['utilisateur_id'] ?>" data-nom="<?= htmlspecialchars($client['prenom'] . ' ' . $client['nom']) ?>" data-action="<?= $client['actif'] ? 'bloquer' : 'debloquer' ?>"><?= $client['actif'] ? 'Bloquer' : 'Débloquer' ?></button>
                     </div>
                 </td>

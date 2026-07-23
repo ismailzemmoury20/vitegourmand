@@ -8,7 +8,7 @@ class changerMdpController
     public function index(): void
     {
         if (empty($_SESSION['utilisateur_id'])) {
-            header('Location: /vitegourmand/public/index.php?p=login');
+            header('Location: /index.php?p=login');
             exit;
         }
 
@@ -31,11 +31,11 @@ class changerMdpController
                 $_SESSION['doit_changer_mdp'] = 0;
 
                 if ((int) $_SESSION['role_id'] === 1) {
-                    header('Location: /vitegourmand/public/index.php?p=admin-dashboard');
+                    header('Location: /index.php?p=admin-dashboard');
                 } elseif ((int) $_SESSION['role_id'] === 3) {
-                    header('Location: /vitegourmand/public/index.php?p=employe-commandes');
+                    header('Location: /index.php?p=employe-commandes');
                 } else {
-                    header('Location: /vitegourmand/public/index.php?p=commandes');
+                    header('Location: /index.php?p=commandes');
                 }
                 exit;
             }

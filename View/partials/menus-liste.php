@@ -13,7 +13,7 @@
                 <p class="price"><?= (float) $menu['prix_par_personne'] ?> €</p>
                 <div class="menu-content-boutons">
                     <button type="button" class="voir-detail" data-id="<?= (int) $menu['menu_id'] ?>">Voir le détail</button>
-                    <a href="/vitegourmand/public/index.php?p=commande&menu_id=<?= (int) $menu['menu_id'] ?>">
+                    <a href="/index.php?p=commande&menu_id=<?= (int) $menu['menu_id'] ?>">
                         <button>Commander</button>
                     </a>
                 </div>

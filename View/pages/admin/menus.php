@@ -1,7 +1,7 @@
 <?php ob_start(); ?>
 <div class="espace-entete">
     <h1 class="espace-titre">Gestion des menus</h1>
-    <a class="bouton" href="/vitegourmand/public/index.php?p=admin-menus&action=ajouter">+ Ajouter un menu</a>
+    <a class="bouton" href="/index.php?p=admin-menus&action=ajouter">+ Ajouter un menu</a>
 </div>
 <?php if (!empty($success)): ?>
     <p class="message message-succes"><?= htmlspecialchars($success) ?></p>

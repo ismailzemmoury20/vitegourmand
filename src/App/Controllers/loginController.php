@@ -36,20 +36,20 @@ class loginController
                     $_SESSION['doit_changer_mdp'] = (int) ($user['doit_changer_mdp'] ?? 0);
 
                     if ($_SESSION['doit_changer_mdp']) {
-                        header('Location: /vitegourmand/public/index.php?p=changer-mdp');
+                        header('Location: /index.php?p=changer-mdp');
                         exit;
                     }
 
                     $redirect = $_GET['redirect'] ?? '';
 
                     if ($redirect === 'commande' && (int) $user['role_id'] === 2) {
-                        header('Location: /vitegourmand/public/index.php?p=commande&menu_id=' . (int) ($_GET['menu_id'] ?? 0));
+                        header('Location: /index.php?p=commande&menu_id=' . (int) ($_GET['menu_id'] ?? 0));
                     } elseif ((int) $user['role_id'] === 1) {
-                        header('Location: /vitegourmand/public/index.php?p=admin-dashboard');
+                        header('Location: /index.php?p=admin-dashboard');
                     } elseif ((int) $user['role_id'] === 3) {
-                        header('Location: /vitegourmand/public/index.php?p=employe-commandes');
+                        header('Location: /index.php?p=employe-commandes');
                     } else {
-                        header('Location: /vitegourmand/public/index.php?p=commandes');
+                        header('Location: /index.php?p=commandes');
                     }
                     exit;
                 } else {

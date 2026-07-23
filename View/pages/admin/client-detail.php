@@ -24,7 +24,7 @@
         <?php endif; ?>
     </div>
 </div>
-<p class="suivi-retour"><a href="/vitegourmand/public/index.php?p=admin-clients">Retour aux clients</a></p>
+<p class="suivi-retour"><a href="/index.php?p=admin-clients">Retour aux clients</a></p>
 <?php
 $contenu = ob_get_clean();
 $titre = 'Détail du client - Vite & Gourmand';

@@ -8,21 +8,21 @@ class AuthMiddleware
     public static function check(): void
     {
         if (empty($_SESSION['utilisateur_id'])) {
-            header('Location: /vitegourmand/public/index.php?p=login');
+            header('Location: /index.php?p=login');
             exit;
         }
 
         if (!empty($_SESSION['derniere_activite']) && (time() - $_SESSION['derniere_activite']) > self::TIMEOUT) {
             session_unset();
             session_destroy();
-            header('Location: /vitegourmand/public/index.php?p=login&timeout=1');
+            header('Location: /index.php?p=login&timeout=1');
             exit;
         }
 
         $_SESSION['derniere_activite'] = time();
 
         if (!empty($_SESSION['doit_changer_mdp'])) {
-            header('Location: /vitegourmand/public/index.php?p=changer-mdp');
+            header('Location: /index.php?p=changer-mdp');
             exit;
         }
     }

@@ -10,7 +10,7 @@ class commandeController
     {
         if (empty($_SESSION['utilisateur_id'])) {
             $menu_id = (int) ($_GET['menu_id'] ?? 0);
-            header('Location: /vitegourmand/public/index.php?p=login&redirect=commande&menu_id=' . $menu_id);
+            header('Location: /index.php?p=login&redirect=commande&menu_id=' . $menu_id);
             exit;
         }
         AuthMiddleware::checkClient();
@@ -80,7 +80,7 @@ class commandeController
                             );
 
                             $_SESSION['success'] = "Commande validée ! Numéro : $numero_commande | Total : " . number_format($prix_total, 2) . ' €';
-                            header('Location: /vitegourmand/public/index.php?p=commandes');
+                            header('Location: /index.php?p=commandes');
                             exit;
                         }
                     }

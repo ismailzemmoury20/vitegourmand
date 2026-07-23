@@ -50,7 +50,7 @@
         </ul>
     </div>
 </div>
-<p class="suivi-retour"><a href="/vitegourmand/public/index.php?p=employe-commandes">Retour aux commandes</a></p>
+<p class="suivi-retour"><a href="/index.php?p=employe-commandes">Retour aux commandes</a></p>
 <?php require __DIR__ . '/../../partials/popups/popup-modifier-statut-commande.php'; ?>
 <?php require __DIR__ . '/../../partials/popups/popup-annuler-commande-employe.php'; ?>
 <?php

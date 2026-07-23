@@ -70,7 +70,7 @@
         </div>
         <button type="submit" class="bouton">Créer le menu</button>
     </form>
-    <p class="ajout-menu-retour"><a href="/vitegourmand/public/index.php?p=admin-menus">Retour aux menus</a></p>
+    <p class="ajout-menu-retour"><a href="/index.php?p=admin-menus">Retour aux menus</a></p>
 </div>
 <?php
 $contenu = ob_get_clean();

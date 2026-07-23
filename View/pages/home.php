@@ -12,13 +12,13 @@ ob_start();
         <p>Notre menu est en constante évolution afin de vous proposer des créations toujours renouvelées, adaptées à chaque occasion.</p>
     </div>
     <div class="presentation-image">
-        <img src="/vitegourmand/Image/vitegourmand.jpg" alt="Plats préparés par Vite & Gourmand pour un événement">
+        <img src="/Image/vitegourmand.jpg" alt="Plats préparés par Vite & Gourmand pour un événement">
     </div>
 </section>
 
 <section class="equipe-section">
     <div class="equipe-image">
-        <img src="/vitegourmand/Image/teamrestaurant.jpg" alt="L'équipe de Vite & Gourmand au travail en cuisine">
+        <img src="/Image/teamrestaurant.jpg" alt="L'équipe de Vite & Gourmand au travail en cuisine">
     </div>
     <div class="equipe-texte">
         <h2>Une équipe de professionnels</h2>
