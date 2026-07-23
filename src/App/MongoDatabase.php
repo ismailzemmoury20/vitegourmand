@@ -13,8 +13,8 @@ class MongoDatabase
 
     private function __construct()
     {
-        $uri = $_ENV['MONGO_URI'] ?? 'mongodb://localhost:27017';
-        $dbName = $_ENV['MONGO_DB_NAME'] ?? 'vite-gourmand';
+        $uri = $_ENV['MONGO_URI'] ?? getenv('MONGO_URI') ?? 'mongodb://localhost:27017';
+        $dbName = $_ENV['MONGO_DB_NAME'] ?? getenv('MONGO_DB_NAME') ?? 'vite-gourmand';
         $this->client = new Client($uri);
         $this->db = $this->client->selectDatabase($dbName);
     }
