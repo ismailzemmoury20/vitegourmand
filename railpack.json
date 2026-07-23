@@ -1,0 +1,6 @@
+{
+  "packages": {
+    "php": "8.4"
+  },
+  "phpExtensions": ["pdo", "pdo_mysql", "mbstring"]
+}
